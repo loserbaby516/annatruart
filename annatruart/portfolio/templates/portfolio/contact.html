@@ -1,0 +1,28 @@
+{% extends "portfolio/layout.html" %}
+
+{% load static %}
+{% block script %} <script src="{% static 'portfolio/js/contact.js' %}"></script> {% endblock %}
+
+{% block body %}
+    <form name="contact_form" onsubmit="record_form(); return false;">
+      <input type="hidden" name="access_key" value="4acb6af7-2e7e-468c-a941-10954b54294f">
+      <div class="contact_name">
+        <div>
+          <label for="fname" class="contact-text">First Name (required)</label><br>
+          <input autocomplete="on" id="fname" name="fname" required>
+        </div>
+        <div>
+          <label for="lname" class="contact-text">Last Name (required)</label><br>
+          <input autocomplete="on" id="lname" name="lname" required>
+        </div>
+      </div><br>
+      <label for="email" class="contact-text">Email (required)</label><br>
+      <input autocomplete="on" id="email" name="email" required type="email"><br><br>
+      <label for="message" class="contact-text">Message (required)</label><br>
+      <textarea id="message" name="message" required style="width: 50vw; height: 200px;"></textarea>
+      <br><br>
+      <div class="h-captcha" data-captcha="true"></div><br>
+      <button class="submit-btn" type="submit">Submit</button>
+    </form>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+{% endblock %}

@@ -1,0 +1,206 @@
+{% load static %}
+.about {
+    background: rgba(220, 220, 220, 0.8);
+    text-align: center;
+    margin: 30px;
+}
+
+
+body {
+    background: url("/media/download.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.btn {
+    background-color: CornSilk;
+    border-color: black;
+    color: black;
+}
+
+.btn:hover {
+    background-color: Khaki;
+    border-color: black;
+    color: black;
+    text-decoration: underline;
+}
+
+.card {
+    margin-bottom: 40px;
+    break-inside: avoid;
+}
+
+.card:hover {
+    background-color: darkgrey;
+    border-width: 3px;
+}
+
+.card-body {
+    border-top-style: solid;
+}
+
+.card-title {
+    color: DarkSlateGrey;
+    text-decoration: underline;
+    text-decoration-color: DarkSlateGrey;
+}
+
+.card-body ul {
+    text-align: left;
+    margin-bottom: 0px;
+    padding-left: 20px;
+}
+
+.card-body li {
+    /* for no bullets -> list-style-type: none; */
+}
+
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+.contact {
+    background: rgba(220, 220, 220, 0.85);
+    margin: 30px;
+    padding: 40px 60px;
+}
+
+.contact_name {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+.masonry-with-columns {
+    columns: 6 200px;
+    column-gap: 30px;
+    margin: 60px 60px 30px;
+    div {
+      width: 150px;
+      background: #f1f1f1;
+      color: grey;
+      display: block;
+      width: 100%;
+      text-align: center;
+      line-height: 10px
+      font-size: 14px;
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+}
+
+footer {
+    background-color: PaleGoldenRod;
+    height: 60px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: #e6dd7f;
+    padding: 10px 10px;
+}
+
+.header a, .header span {
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px white;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(192, 179, 38);
+  background-color: rgba(192, 179, 38, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 36px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  font-weight: bold;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+@media screen and (max-width: 675px) {
+    .header a {
+      float: left;
+      display: inline;
+      text-align: left;
+    }
+
+    .header #header-space {
+        display: none;
+    }
+
+    .header a.logo {
+    font-size: 20px;
+    font-weight: bold;
+    }
+}
+
+.info {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.contact-text {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    text-shadow: 2px 2px white;
+}
+
+.submit-btn {
+    color: black;
+    background-color: #f7f7f7;
+    border: 2px solid lightgray;
+    text-shadow: 2px 2px white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+    padding: 10px;
+}

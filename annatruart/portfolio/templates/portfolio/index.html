@@ -1,0 +1,21 @@
+{% extends "portfolio/layout.html" %}
+
+{% block body %}
+
+    {% for artpiece in artpieces %}
+    <div class="card">
+        <a href="{% if artpiece.full_pic %}{{ artpiece.full_pic }}{% else %}{{ artpiece.preview_pic }}{% endif %}"><img src="{{ artpiece.preview_pic.url }}" class="card-img-top" alt="{{ artpiece.title }}"></a>
+        <div class="card-body">
+            <h5 class="card-title">{{ artpiece.title }}</h5>
+            <ul>
+                {% if artpiece.medium %}<li class="card-text">Medium - {{ artpiece.medium }}</li>{% endif %}
+                {% if artpiece.dimensions %}<li class="card-text">Dimensions - {{ artpiece.dimensions }}</li>{% endif %}
+                {% if artpiece.date %}<li class="card-text">Production Date - {{ artpiece.date }}</li>{% endif %}
+                
+            </ul>
+            {% if artpiece.description %}<p class="info"><a href="{% url 'info' artpiece.id %}" class="btn btn-primary">More Info</a></p>{% endif %}
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}
